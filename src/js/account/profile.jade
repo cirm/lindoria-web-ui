@@ -1,0 +1,23 @@
+.container
+   .well
+      form.form-horizontal(name="profileForm")
+         fieldset
+            legend User Profile
+            .form-group
+               label.col-md-2.control-label(for="display") Display Name
+               .col-md-10
+                  input.form-control(name="display", type="text", placeholder="{{vm.display}}", ng-model="vm.display", required)
+            .form-group
+               label.col-md-2.control-label(for="password") Password
+               .col-md-10
+                  input.form-control(name="password", type="password", placeholder="Password", ng-model="vm.password")
+            .form-group
+               label.col-md-2.control-label(for="password1") Password again
+               .col-md-10
+                  input.form-control(name="password1", type="password", placeholder="Password", ui-validate=" '$value==vm.password' ", ui-validate-watch=" 'vm.password' ")
+            .form-group
+               .col-md-10.col-md-offset-2
+                  .pull-right
+                     button.btn.btn-primary(ng-click="vm.update()", ng-disabled="profileForm.$invalid") Submit
+                     | &nbsp;
+                     a.btn.btn-default(href="/") Cancel

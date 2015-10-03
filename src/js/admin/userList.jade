@@ -1,0 +1,9 @@
+.container
+    table.table
+        tr  User List
+            td displayName
+            td roles
+        tr(ng-repeat="user in vm.users")
+            td {{user.displayName}}
+            td(ng-repeat="role in user.roles") {{role}}
+

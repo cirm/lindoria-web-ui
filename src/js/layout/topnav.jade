@@ -1,0 +1,21 @@
+.navbar-right(ng-controller="ldTopNavController as topnav")
+    form.navbar-form(ng-hide="topnav.access.isAuthenticated()")
+        ul.nav.navbar-nav
+        .form-group
+            input.form-control(placeholder="username", ng-model="username")
+        .form-group
+            input.form-control(type="password", placeholder="password", ng-model="password")
+        button.btn.btn-primary(ng-click="topnav.signIn(username, password)") Sign In
+    ul.nav.navbar-nav.navbar-right(ng-show="topnav.access.isAuthenticated()")
+        li.dropdown(dropdown="", on-toggle="toggled(open)")
+            a.dropdown-toggle(href="", dropdown-toggle="")
+                | {{topnav.identity.currentUser().display + " "}}
+                b.caret
+            ul.dropdown-menu(role="menu")
+                li(ng-show="topnav.access.isAuthorizedFor('admin')")
+                    a(href="/admin/users") User List
+                li
+                    a(href="/profile") Profile
+                li.divider
+                li
+                    a(href="", ng-click="topnav.signOut()") Sign Out
