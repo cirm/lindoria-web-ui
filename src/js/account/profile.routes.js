@@ -20,7 +20,7 @@
 
     $routeProvider
       .when('/profile', {
-        templateUrl : '/partials/account/profile',
+        templateUrl : '/account/profile.html',
         controller  : 'ldProfileController',
         controllerAs: 'vm',
         resolve     : {authCheck : isAuthenticated}

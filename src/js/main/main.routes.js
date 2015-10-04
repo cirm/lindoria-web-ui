@@ -14,7 +14,7 @@
   function configure($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl : '/partials/main/main',
+        templateUrl : 'main/main.html',
         controller  : 'ldMainController',
         controllerAs: 'vm'
       });

@@ -20,7 +20,7 @@
 
     $routeProvider
       .when('/admin/users', {
-        templateUrl : '/partials/admin/userlist',
+        templateUrl : '/admin/userlist.html',
         controller  : 'ldUserListController',
         controllerAs: 'vm',
         resolve     : {routeResolveCheck: checkAdmin }
