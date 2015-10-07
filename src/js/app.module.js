@@ -12,8 +12,7 @@
       'ngAnimate',
       'ngResource',
       'ui.bootstrap',
-      'toaster',
-      'templates'
+      'toaster'
     ]);
 
 })();

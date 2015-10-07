@@ -26,7 +26,6 @@
     vm.title = 'ldUserListController';
 
     activate();
-
     ////////////////
 
     /**
