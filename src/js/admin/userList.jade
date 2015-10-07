@@ -4,6 +4,6 @@
             td displayName
             td roles
         tr(ng-repeat="user in vm.users")
-            td {{user.displayName}}
+            td {{user.usr_display}}
             td(ng-repeat="role in user.roles") {{role}}
 
