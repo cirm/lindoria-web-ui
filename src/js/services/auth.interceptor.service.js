@@ -28,7 +28,7 @@
     function responseError(rejection) {
       if (rejection.status === 401) {
         // handle the case where the user is not authenticated
-        console.log('we got here? authinterceptor?')
+        console.log('we got here? authinterceptor?');
       }
       return $q.reject(rejection.data.toString());
     }

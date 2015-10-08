@@ -36,7 +36,7 @@
     function checkAuthRole(role) {
       currentUser = identity.currentUser();
       if (!!currentUser && currentUser.roles.indexOf(role) > -1) {
-        return true
+        return true;
       } else {
         return $q.reject('not authorized');
       }
