@@ -27,6 +27,7 @@
                               ldNotificationService,
                               ldUserAuthService,
                               ldUserAccessService) {
+    /* jshint validthis: true */
     var vm = this;
     vm.auth = ldUserAuthService;
     vm.notifier = ldNotificationService;

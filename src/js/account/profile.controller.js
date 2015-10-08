@@ -16,8 +16,10 @@
    *
    * @ngInject
    */
-  function ldProfileController(ldUserIdentityService, ldNotificationService, ldUserAuthService) {
-
+  function ldProfileController(ldUserIdentityService,
+                               ldNotificationService,
+                               ldUserAuthService) {
+    /* jshint validthis: true */
     var vm = this;
     var newUserData = {};
     vm.title = 'ldProfileController';
