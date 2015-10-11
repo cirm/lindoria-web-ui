@@ -1,9 +1,13 @@
 .container
     table.table
         tr  User List
+            td username
             td displayName
+            td last visited
             td roles
         tr(ng-repeat="user in vm.users")
+            td {{user.username}}
             td {{user.usr_display}}
+            td {{user.visited_at | date:"dd/MM/yy HH:mm" }}
             td(ng-repeat="role in user.roles") {{role}}
 

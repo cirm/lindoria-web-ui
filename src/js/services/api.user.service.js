@@ -8,7 +8,7 @@
   /* @ngInject */
   function ldApiUserService($resource) {
 
-    return $resource('/api/users/:id', {id: '@id'}, {
+    return $resource('/api/users/:username', {username: '@username'}, {
       update: {method: 'PUT', isArray: false}
     });
 
