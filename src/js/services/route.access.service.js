@@ -26,7 +26,7 @@
      */
     function checkHasAuth() {
       currentUser = identity.currentUser();
-      if (!!currentUser === true) {
+      if (!!currentUser) {
         return true;
       } else {
         return $q.reject('not authorized');
