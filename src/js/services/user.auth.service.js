@@ -53,7 +53,6 @@
           identity.updateCurrentUser(response.token, clone);
           dfd.resolve(true);
         } else {
-          delete $window.sessionStorage.token;
           // Handle login errors here
           dfd.resolve(response.error.reason);
         }
