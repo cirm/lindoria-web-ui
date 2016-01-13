@@ -12,6 +12,8 @@
                 | {{topnav.identity.currentUser().display + " "}}
                 b.caret
             ul.dropdown-menu(role="menu")
+                li
+                    a(href="/provinces") Provinces
                 li(ng-show="topnav.access.isAuthorizedFor('admin')")
                     a(href="/admin/users") User List
                 li
