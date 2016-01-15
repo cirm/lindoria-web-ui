@@ -23,11 +23,11 @@
     "angular-animate": "~1.4.7",
     "angular-resource": "~1.4.7",
     "angularjs-toaster": "~0.4.15",
-    "angular-ui-grid": "~3.0.4",
     "angular-bootstrap": "~0.13.3",
-    "bootstrap" : "~3.3.5"
+    "bootstrap": "~3.3.5",
+    "ag-grid": "~2.3.7"
   },
-  "resolutions" : {
+  "resolutions": {
     "angular": "1.4.7"
   }
 }

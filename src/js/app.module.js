@@ -12,7 +12,8 @@
       'ngAnimate',
       'ngResource',
       'ui.bootstrap',
-      'toaster'
+      'toaster',
+      'angularGrid'
     ]);
 
 })();

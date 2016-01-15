@@ -16,20 +16,36 @@
    *
    * @ngInject
    */
-  function ldProvinceListController(ldApiProvinceService) {
+  function ldProvinceListController(ldApiProvinceService,
+                                    ldGridService) {
     /* jshint validthis: true */
-    var vm = this;
-    vm.provinceData = {};
-    vm.title = 'ldProvinceListController';
-    vm.display = {};
+    var vm             = this;
+    vm.grid = ldGridService;
+    vm.provinceData    = {};
+    vm.title           = 'ldProvinceListController';
     vm.provinceService = ldApiProvinceService;
 
-    activate();
+    vm.columDefs = [
+      {headerName: 'Province', field: 'display'},
+      {headerName: 'Regent', field: 'regent'},
+      {headerName: 'Level', field: 'level'},
+      {headerName: 'Loyalty', field: 'loyalty'}
+
+    ];
+
+    vm.gridOptions = {
+      columDefs: vm.columDefs
+    };
+
+    activate()
+      .then(function () {
+        vm.gridOptions.api.setRowData(vm.provinceData);
+      });
     ////////////////
 
     /**
      * @name activate
-     * @desc Module inittiation
+     * @desc Module initiation
      * @memberOf Controllers.UserListController
      */
     function activate() {
@@ -43,8 +59,8 @@
      *
      */
     function queryProvinces() {
-      vm.provinceData = vm.provinceService.query();
+      return vm.provinceData = vm.provinceService.query();
     }
-    
+
   }
 })();

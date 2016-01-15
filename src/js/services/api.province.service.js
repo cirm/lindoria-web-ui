@@ -8,7 +8,7 @@
   /* @ngInject */
   function ldApiProvinceService($resource) {
 
-    return $resource('/api/provinces/:name', {name: '@pName'}, {
+    return $resource('/api/plrovinces/:name', {name: '@pName'}, {
       update: {method: 'PUT', isArray: false}
     });
 
